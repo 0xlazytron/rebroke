@@ -18,17 +18,17 @@ const HeroSection = () => {
 
       {/* Real 2D clouds */}
       <div className="absolute top-24 left-[10%] z-0">
-        <img src="/public/graphics/cloud/cloud.svg" alt="Cloud" className="w-32 opacity-90 animate-float" />
+        <img src="/graphics/cloud/cloud.svg" alt="Cloud" className="w-32 opacity-90 animate-float" />
       </div>
       <div className="absolute top-40 right-[15%] z-0">
-        <img src="/public/graphics/cloud/cloud-1.svg" alt="Cloud" className="w-40 opacity-90 animate-float" style={{ animationDelay: "1.2s" }} />
+        <img src="/graphics/cloud/cloud-1.svg" alt="Cloud" className="w-40 opacity-90 animate-float" style={{ animationDelay: "1.2s" }} />
       </div>
       <div className="absolute top-60 left-[30%] z-0">
-        <img src="/public/graphics/cloud/cloud-2.svg" alt="Cloud" className="w-36 opacity-90 animate-float" style={{ animationDelay: "0.7s" }} />
+        <img src="/graphics/cloud/cloud-2.svg" alt="Cloud" className="w-36 opacity-90 animate-float" style={{ animationDelay: "0.7s" }} />
       </div>
       {/* Lower Background */}
       <div className='absolute bottom-0 left-0 right-0'>
-        <img className="w-full" src="/public/graphics/lower_hero.svg" alt="" />
+        <img className="w-full" src="/graphics/lower_hero.svg" alt="" />
       </div>
       <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
         <div className="order-2 md:order-1">
@@ -74,7 +74,7 @@ const HeroSection = () => {
               View on DexScreener
             </a>
             <a
-              href="/public/pdfs/Broke.pdf"
+              href="/pdfs/Broke.pdf"
               target='_blank'
               rel="noopener noreferrer"
               className="brutalist-button flex-1 justify-center bg-white text-amber-800 hover:bg-orange-400 hover:text-white"
@@ -92,7 +92,7 @@ const HeroSection = () => {
               <div className="absolute inset-0 flex items-center justify-center">
 
                 <div className="text-9xl font-display animate-bounce-slight">
-                  <img src="/public/graphics/broke.png" alt="" />
+                  <img src="/graphics/broke.png" alt="" />
                 </div>
 
 

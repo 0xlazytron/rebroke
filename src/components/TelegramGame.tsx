@@ -71,7 +71,7 @@ const TelegramGame = () => {
               <div className="w-full aspect-square max-w-md mx-auto bg-broke-card brutalist-border relative overflow-hidden">
                 <div className="absolute inset-0 bg-broke-background/10"></div>
                 <div className="relative object-cover">
-                  <img src="/public/graphics/game.png" alt="broke coin image" />
+                  <img src="/graphics/game.png" alt="broke coin image" />
                 </div>
               </div>
             </div>

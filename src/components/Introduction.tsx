@@ -42,7 +42,7 @@ const Introduction = () => {
             <div className="w-full h-[400px] relative overflow-hidden brutalist-border">
               <div className="absolute inset-0 bg-broke-card flex items-center justify-center">
                 <div className="relative object-cover">
-                  <img src="/public/graphics/tok.png" alt="broke coin image" />
+                  <img src="/graphics/tok.png" alt="broke coin image" />
                   {/* <div className="text-9xl animate-bounce-slight">🪙</div> */}
                   {/* <div className="absolute top-1/2 -left-10 w-6 h-24 bg-broke-primary -rotate-45"></div>
                   <div className="absolute bottom-0 right-0 w-20 h-4 bg-broke-tertiary"></div> */}
@@ -69,7 +69,7 @@ const Introduction = () => {
 
       {/* Added comic-style clouds */}
       <div className="absolute top-20 right-[20%] w-32 h-2">
-        <img src="/public/graphics/cloud/cloud-3.svg" alt="" />
+        <img src="/graphics/cloud/cloud-3.svg" alt="" />
       </div>
     </section>
   );

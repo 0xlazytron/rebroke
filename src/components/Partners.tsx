@@ -8,7 +8,7 @@ const Partners = () => {
       id: 1,
       name: "SolScan",
       url: "https://solscan.io",
-      logo: "/public/icons/solscan.svg"
+      logo: "/icons/solscan.svg"
     },
     {
       id: 2,
@@ -20,13 +20,13 @@ const Partners = () => {
       id: 3,
       name: "Magic Eden",
       url: "https://magiceden.io",
-      logo: "/public/icons/magic.svg"
+      logo: "/icons/magic.svg"
     },
     {
       id: 4,
       name: "Phantom",
       url: "https://phantom.app",
-      logo: "/public/icons/solana.svg"
+      logo: "/icons/solana.svg"
     },
     {
       id: 5,
@@ -44,7 +44,7 @@ const Partners = () => {
       id: 7,
       name: "SolScan",
       url: "https://solscan.io",
-      logo: "/public/icons/solscan.svg"
+      logo: "/icons/solscan.svg"
     },
     {
       id: 8,
@@ -56,7 +56,7 @@ const Partners = () => {
       id: 9,
       name: "Magic Eden",
       url: "https://solscan.io",
-      logo: "/public/icons/magic.svg"
+      logo: "/icons/magic.svg"
     },
     {
       id: 10,
