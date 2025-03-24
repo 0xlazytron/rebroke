@@ -1,69 +1,89 @@
-# Welcome to your Lovable project
+# BrokeCOIN ($BROKE) - A Lifestyle Cryptocurrency
 
-## Project info
+![BrokeCOIN Logo](public/logo.png)
 
-**URL**: https://lovable.dev/projects/03b5958f-e657-4dba-8d7c-b4b6acd549a4
+**BrokeCOIN ($BROKE)** is a lifestyle cryptocurrency that embraces the adventurous spirit of crypto enthusiasts, particularly those who have faced challenges in the volatile market. The project offers unique NFTs, games, airdrops, community giveaways, staking opportunities, and partnerships with real-world vendors.
 
-## How can I edit this code?
+## 🚀 Key Features
 
-There are several ways of editing your application.
+- **Community-Centric Approach** - Transparency, consistency, and respect drive the BrokeCOIN ecosystem, avoiding paid promotions in favor of organic growth.
+- **Engaging Utilities** - Play-to-Earn (P2E) games, NFT minting with staking rewards, and interactive community events.
+- **Robust Tokenomics** - A total supply of **100 billion tokens**, allocated for liquidity, burns, community rewards, marketing, development, and airdrops.
+- **Transparent Roadmap** - Phased development focusing on token launch, community building, game and NFT launches, AI chatbot development, educational initiatives, exchange listings, and community campaigns.
 
-**Use Lovable**
+## 📁 Project Structure
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/03b5958f-e657-4dba-8d7c-b4b6acd549a4) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+📦 brokecoin-brutalist-meme-magic
+├── public/                 # Static assets (graphics, icons, PDFs, etc.)
+├── src/
+│   ├── components/         # Reusable UI components
+│   ├── pages/              # Website pages (Index, NotFound, etc.)
+│   ├── hooks/              # Custom React hooks
+│   ├── lib/                # Utility functions
+│   ├── main.tsx            # Entry point for React app
+│   ├── App.tsx             # Main App component
+├── tailwind.config.ts      # Tailwind CSS configuration
+├── tsconfig.json           # TypeScript configuration
+├── vite.config.ts          # Vite configuration
+├── package.json            # Project dependencies
+├── README.md               # Project documentation (this file)
 ```
 
-**Edit a file directly in GitHub**
+## 🔧 Installation
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Prerequisites
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
+- Node.js & npm/pnpm
+- Git
 - Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
 
-## How can I deploy this project?
+### Setup
 
-Simply open [Lovable](https://lovable.dev/projects/03b5958f-e657-4dba-8d7c-b4b6acd549a4) and click on Share -> Publish.
+1. Clone the repository:
 
-## I want to use a custom domain - is that possible?
+   ```sh
+   git clone https://github.com/0xlazytron/rebroke.git
+   cd rebroke
+   ```
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+2. Install dependencies:
+
+   ```sh
+   pnpm install  # or npm install
+   ```
+
+3. Start the development server:
+
+   ```sh
+   pnpm dev  # or npm run dev
+   ```
+
+4. Open in browser: `http://localhost:5173`
+
+## 🛠 Deployment
+
+To build for production:
+
+```sh
+pnpm build  # or npm run build
+```
+
+Then deploy the `dist/` folder to your preferred hosting provider.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please submit a pull request with changes.
+
+## 📜 License
+
+This project is licensed under the MIT License. See `LICENSE` for details.
+
+## 🌍 Connect with Us
+
+- **Website:** [BrokeCOIN Official Site](https://brokecoinonsol.com)
+- **Whitepaper:** [BrokeCOIN Whitepaper](https://brokecoinonsol.com/Broke.pdf)
+- **Twitter:** [@BrokeCOIN](https://twitter.com/BrokeCOIN)
+- **Telegram:** [BrokeCOIN Community](https://t.me/BrokeCOIN)
+
+_Please note: Investing in cryptocurrencies involves risks due to market volatility. It's essential to conduct thorough research and consult financial advisors before making investment decisions._
