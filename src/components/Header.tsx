@@ -31,7 +31,7 @@ const Header = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8 items-center">
+        <nav className="hidden lg:flex space-x-8 items-center">
           <a href="#intro" className="font-bubble text-broke-text hover:text-broke-primary transition-colors">About</a>
           <a href="#nft" className="font-bubble text-broke-text hover:text-broke-primary transition-colors">NFTs</a>
           <a href="#game" className="font-bubble text-broke-text hover:text-broke-primary transition-colors">Game</a>
@@ -54,7 +54,7 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2 text-broke-text"
+          className="lg:hidden p-2 text-broke-text"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -63,8 +63,8 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div className={cn(
-        "fixed inset-0 bg-broke-background brutalist-pattern flex flex-col pt-20 px-6 transition-all duration-300 ease-in-out",
-        isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none translate-x-full"
+        "fixed inset-0 bg-broke-background/95 brutalist-pattern flex flex-col pt-20 px-6 transition-all duration-300 ease-in-out",
+        isMenuOpen ? "  opacity-100 pointer-events-auto  " : "opacity-0 pointer-events-none translate-x-full"
       )}>
         {/* Close Button */}
         <button

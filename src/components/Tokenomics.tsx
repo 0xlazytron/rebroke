@@ -26,18 +26,18 @@ const Tokenomics = () => {
   }, []);
 
   const tokenData = [
-    { name: 'Community Rewards', value: 40, color: '#FCA903' },
-    { name: 'Development', value: 15, color: '#FF5900' },
-    { name: 'Liquidity Pool', value: 15, color: '#FF3B30' },
-    { name: 'Burn Wallet', value: 10, color: '#5E5CE6' },
-    { name: 'Marketing & Partnerships', value: 10, color: '#4CAF50' },
-    { name: 'Team & Development', value: 5, color: '#FF9500' },
-    { name: 'Airdrops & Community', value: 5, color: '#8E8E93' },
+    { name: 'Liquidity Pool', value: 40, color: '#FCA903' },
+    { name: 'Community Rewards', value: 15, color: '#FF3B30' },
+    { name: 'Burn Wallet', value: 10, color: '#FF5900' },
+    { name: 'Marketing Wallet', value: 10, color: '#5E5CE6' },
+    { name: 'Community Incentives', value: 10, color: '#4CAF50' },
+    { name: 'Team Tokens (locked)', value: 10, color: '#FF9500' },
+    { name: 'Development', value: 5, color: '#8E8E93' },
   ];
 
   const totalSupply = "1,000,000,000,000";
-  const remainingSupply = "750,000,000,000";
-  const burnedSupply = "250,000,000,000";
+  const remainingSupply = "90,000,000,000";
+  const burnedSupply = "10,000,000,000";
 
   const CustomTooltip = ({ active, payload }: { active?: boolean; payload?: any[] }) => {
     if (active && payload && payload.length) {
@@ -220,7 +220,7 @@ const Tokenomics = () => {
 
                   <div className="flex justify-between">
                     <span className="font-bubble text-broke-text">Tax:</span>
-                    <span className="font-mono text-amber-800 font-bold">0% Buy / 0% Sell</span>
+                    <span className="font-mono text-amber-800 font-bold">0.25 buy/sell</span>
                   </div>
                 </div>
               </div>

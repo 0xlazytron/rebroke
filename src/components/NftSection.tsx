@@ -140,8 +140,7 @@ const NftSection = () => {
             MINT THE BROKIES NFT
           </h2>
           <p className="font-bubble text-broke-muted max-w-2xl mx-auto">
-            Our NFTs are as broke as you are! Collect these uniquely worthless digital assets
-            that might just be worth something someday (but probably not).
+            Our NFTs are as broke as you are! Collect these uniquely Brokie digital assets that unlock unique rewards such as airdrops, discounted future Brokie Merch, free classes in Broke University, staking and more!
           </p>
         </div>
 

@@ -13,27 +13,21 @@ const Introduction = () => {
 
             <div className="grid grid-cols-1 gap-8 mt-8">
               <div className="brutalist-card">
-                <h3 className="font-comic text-xl text-broke-primary mb-3">BROKE AS A JOKE</h3>
+                <h3 className="font-comic text-xl text-broke-primary mb-3">BROKE OR VALHALLA</h3>
                 <p className="font-bubble text-broke-text">
-                  BrokeCoin started as a joke between friends who lost everything in the last bear market.
-                  We decided if we're going to be broke, let's at least have fun with it.
-                </p>
+                  BrokeCoin started as a simple meme because of market forces and family belief that we’ll go Broke in crypto. They were right, but the trenches demand our participation. We decided if we're going to be broke, let's at least have fun with it. </p>
               </div>
 
               <div className="brutalist-card">
                 <h3 className="font-comic text-xl text-broke-primary mb-3">COMMUNITY POWERED</h3>
                 <p className="font-bubble text-broke-text">
-                  What began as a meme has evolved into a vibrant community of crypto enthusiasts united by humor and
-                  the shared experience of watching our portfolios crash together.
-                </p>
+                  What began as a meme has evolved into a vibrant community of crypto enthusiasts of former rug pulled, liquidated and normal retail investors united by humor and the shared experience of watching our portfolios crash together.  </p>
               </div>
 
               <div className="brutalist-card">
                 <h3 className="font-comic text-xl text-broke-primary mb-3">UTILITY? WE'RE BROKE!</h3>
                 <p className="font-bubble text-broke-text">
-                  Unlike other tokens that promise the moon and deliver nothing, BrokeCoin promises nothing
-                  and might just deliver something! Low expectations, high hopes.
-                </p>
+                  Unlike other tokens that promise the moon and deliver nothing, BrokeCoin focuses on building utility and lives by promising: Transparency | Utility | Respect    </p>
               </div>
             </div>
           </div>
