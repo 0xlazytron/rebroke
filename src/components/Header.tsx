@@ -1,6 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Twitter, Globe, Download } from 'lucide-react';
+import { Menu, X, Download, } from 'lucide-react';
+import { Twitter, Globe } from "lucide-react";
+import { FaTiktok, FaReddit, FaTelegramPlane } from "react-icons/fa";
 import { cn } from '@/lib/utils';
 
 const Header = () => {
@@ -39,15 +41,21 @@ const Header = () => {
           <a href="#roadmap" className="font-bubble text-broke-text hover:text-broke-primary transition-colors">Roadmap</a>
 
           <div className="flex space-x-3">
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-broke-card rounded-full hover:bg-broke-primary/20 transition-colors">
-              <Twitter size={18} className="text-broke-text" />
+            <a href="https://x.com/brokecoinonsol" target="_blank" rel="noopener noreferrer" className="p-3 bg-broke-card rounded-full hover:bg-broke-primary/20 transition-colors">
+              <Twitter size={24} className="text-broke-text" />
             </a>
-            <a href="https://t.me/BrokeCoinbot" target="_blank" rel="noopener noreferrer" className="p-2 bg-broke-card rounded-full hover:bg-broke-primary/20 transition-colors">
-              <Globe size={18} className="text-broke-text" />
+            <a href="https://t.me/Brokecoinonsolana" target="_blank" rel="noopener noreferrer" className="p-3 bg-broke-card rounded-full hover:bg-broke-primary/20 transition-colors">
+              <FaTelegramPlane size={24} className="text-broke-text" />
+            </a>
+            <a href="https://www.tiktok.com/@brokecoinonsolana" target="_blank" rel="noopener noreferrer" className="p-3 bg-broke-card rounded-full hover:bg-broke-primary/20 transition-colors">
+              <FaTiktok size={24} className="text-broke-text" />
+            </a>
+            <a href="https://www.reddit.com/r/BrokeCoinonSol" target="_blank" rel="noopener noreferrer" className="p-3 bg-broke-card rounded-full hover:bg-broke-primary/20 transition-colors">
+              <FaReddit size={24} className="text-broke-text" />
             </a>
           </div>
 
-          <a href="https://dexscreener.com/solana/dfvyzkqbhs3lxtuojbtv5mtfyycnmcl66rad1nft7u46" target='__blank' className="brutalist-button">
+          <a href="https://jup.ag/tokens/Ga4oZoNRLkZkruJpS8NLwa8DJCwKP9hbTBSNDQZ9V43v" target='__blank' className="brutalist-button">
             <Download className="mr-2 h-4 w-4" /> Buy Now
           </a>
         </nav>
@@ -85,11 +93,18 @@ const Header = () => {
               <Twitter size={24} className="text-broke-text" />
             </a>
             <a href="https://t.me/Brokecoinonsolana" target="_blank" rel="noopener noreferrer" className="p-3 bg-broke-card rounded-full hover:bg-broke-primary/20 transition-colors">
-              <Globe size={24} className="text-broke-text" />
+              <FaTelegramPlane size={24} className="text-broke-text" />
+            </a>
+            <a href="https://www.tiktok.com/@brokecoinonsolana" target="_blank" rel="noopener noreferrer" className="p-3 bg-broke-card rounded-full hover:bg-broke-primary/20 transition-colors">
+              <FaTiktok size={24} className="text-broke-text" />
+            </a>
+            <a href="https://www.reddit.com/r/BrokeCoinonSol" target="_blank" rel="noopener noreferrer" className="p-3 bg-broke-card rounded-full hover:bg-broke-primary/20 transition-colors">
+              <FaReddit size={24} className="text-broke-text" />
             </a>
           </div>
 
-          <a href="https://dexscreener.com/solana/dfvyzkqbhs3lxtuojbtv5mtfyycnmcl66rad1nft7u46" target='__blank' className="brutalist-button w-full justify-center mt-8" onClick={() => setIsMenuOpen(false)}>
+          <a href="https://jup.ag/tokens/Ga4oZoNRLkZkruJpS8NLwa8DJCwKP9hbTBSNDQZ9V43v
+" target='__blank' className="brutalist-button w-full justify-center mt-8" onClick={() => setIsMenuOpen(false)}>
             <Download className="mr-2 h-5 w-5" /> Buy Now
           </a>
         </nav>

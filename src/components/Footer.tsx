@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { Twitter, Github, MessageCircle, ExternalLink } from 'lucide-react';
+import { Twitter, ExternalLink } from 'lucide-react';
+import { FaTiktok, FaReddit, FaTelegramPlane } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -32,10 +33,26 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="w-10 h-10 brutalist-border-sm bg-broke-background flex items-center justify-center text-broke-text hover:bg-broke-primary hover:text-broke-background transition-colors"
               >
-                <MessageCircle size={18} />
+                <FaTelegramPlane size={24} className="text-broke-text" />
               </a>
 
+              <a
+                href="https://www.tiktok.com/@brokecoinonsolana"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 brutalist-border-sm bg-broke-background flex items-center justify-center text-broke-text hover:bg-broke-primary hover:text-broke-background transition-colors"
+              >
+                <FaTiktok size={24} className="text-broke-text" />
+              </a>
+              <a
+                href="https://www.reddit.com/r/BrokeCoinonSol"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 brutalist-border-sm bg-broke-background flex items-center justify-center text-broke-text hover:bg-broke-primary hover:text-broke-background transition-colors"
+              >
+                <FaReddit size={24} className="text-broke-text" />
 
+              </a>
             </div>
           </div>
 
