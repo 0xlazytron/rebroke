@@ -18,15 +18,21 @@ const Partners = () => {
     },
     {
       id: 3,
-      name: "Magic Eden",
-      url: "https://magiceden.io",
-      logo: "/icons/magic.svg"
+      name: "Jupiter",
+      url: "https://jup.ag",
+      logo: "https://jup.ag/_next/image?url=%2Fsvg%2Fjupiter-logo.png&w=32&q=75"
     },
     {
       id: 4,
       name: "Phantom",
       url: "https://phantom.app",
       logo: "/icons/solana.svg"
+    },
+    {
+      id: 4,
+      name: "Swftcoin Bridgers",
+      url: "https://swap.swft.pro/#/?sourceFlag=BROKE",
+      logo: "https://swap.swft.pro/img/allchain.4cda5362.png"
     },
     {
       id: 5,
@@ -54,9 +60,9 @@ const Partners = () => {
     },
     {
       id: 9,
-      name: "Magic Eden",
-      url: "https://solscan.io",
-      logo: "/icons/magic.svg"
+      name: "Jupiter",
+      url: "https://jup.ag",
+      logo: "https://jup.ag/_next/image?url=%2Fsvg%2Fjupiter-logo.png&w=32&q=75"
     },
     {
       id: 10,

@@ -113,11 +113,11 @@ const Footer = () => {
 
             <div className="space-y-4">
               <a
-                href="https://raydium.io/swap/?inputMint=sol&outputMint=Ga4oZoNRLkZkruJpS8NLwa8DJCwKP9hbTBSNDQZ9V43v"
+                href="https://jup.ag/tokens/Ga4oZoNRLkZkruJpS8NLwa8DJCwKP9hbTBSNDQZ9V43v"
                 target='__blank'
                 className="brutalist-button w-full justify-center"
               >
-                <ExternalLink className="mr-2 h-4 w-4" /> Buy on Raydium
+                <ExternalLink className="mr-2 h-4 w-4" /> Buy on Jupiter
               </a>
 
               <a

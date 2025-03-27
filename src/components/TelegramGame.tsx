@@ -56,7 +56,7 @@ const TelegramGame = () => {
             </div>
 
             <a
-              href="https://t.me/BrokeCoinbot/BROKE"
+              href="https://t.me/brokiesbrokebot?profile"
               target="_blank"
               rel="noopener noreferrer"
               className="brutalist-button inline-flex"
