@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 
 const Roadmap = () => {
@@ -44,10 +43,10 @@ const Roadmap = () => {
       phase: "PHASE 1",
       title: "FOUNDATION",
       items: [
-        "Website Launch",
-        "Social Media Setup",
-        "Community Building",
-        "Token Launch on DEX",
+        { text: "Website Launch", completed: true },
+        { text: "Social Media Setup", completed: true },
+        { text: "Community Building", completed: true },
+        { text: "Token Launch on DEX", completed: true },
       ],
       icon: "🚀"
     },
@@ -55,10 +54,10 @@ const Roadmap = () => {
       phase: "PHASE 2",
       title: "GROWTH",
       items: [
-        "Telegram Game Launch",
-        "Initial Marketing Push",
-        "Partner Collaborations",
-        "Meme Contest Kickoff",
+        { text: "Telegram Game Launch", completed: true },
+        { text: "Initial Marketing Push", completed: true },
+        { text: "Partner Collaborations", completed: true },
+        { text: "Meme Contest Kickoff", completed: true },
       ],
       icon: "📈"
     },
@@ -66,10 +65,10 @@ const Roadmap = () => {
       phase: "PHASE 3",
       title: "EXPANSION",
       items: [
-        "NFT Collection Launch",
-        "CEX Listings",
-        "Major Marketing Campaign",
-        "Community DAO Formation",
+        { text: "NFT Collection Launch", completed: true },
+        { text: "CEX Listings", completed: false },
+        { text: "Major Marketing Campaign", completed: false },
+        { text: "Community DAO Formation", completed: true },
       ],
       icon: "🌍"
     },
@@ -77,21 +76,17 @@ const Roadmap = () => {
       phase: "PHASE 4",
       title: "EVOLUTION",
       items: [
-        "Expanded Utility Development",
-        "Major Exchange Listings",
-        "Mainstream Marketing Push",
-        "Broke-to-Rich Ecosystem",
+        { text: "Expanded Utility Development", completed: false },
+        { text: "Major Exchange Listings", completed: false },
+        { text: "Broke University Launch", completed: false },
+        { text: "Broke-to-Rich Ecosystem", completed: false },
       ],
       icon: "💎"
     }
   ];
 
-  // Background images for each roadmap phase
   const phaseBackgrounds = [
-    "", // Foundation background
-    "", // Growth background
-    "", // Expansion background
-    "", // Evolution background
+    "", "", "", ""
   ];
 
   return (
@@ -108,23 +103,19 @@ const Roadmap = () => {
         </div>
 
         <div className="relative">
-          {/* Progress Line */}
           <div className="absolute top-24 left-0 w-full h-4 bg-amber-300 brutalist-border-sm z-10">
             <div
               className="h-full bg-broke-primary transition-all duration-1000 ease-out"
               style={{ width: `${(activePhase + 1) * 25}%` }}
             ></div>
 
-            {/* Icon circles along the line - removed duplicate circles */}
             {[0, 1, 2, 3].map((i) => (
               <div
                 key={i}
-                className={`absolute top-0 h-12 w-12 -mt-5 transform -translate-x-1/2 transition-all duration-500 ${i <= activePhase ? 'rotate-0 scale-110' : '-rotate-45 scale-90'
-                  }`}
+                className={`absolute top-0 h-12 w-12 -mt-5 transform -translate-x-1/2 transition-all duration-500 ${i <= activePhase ? 'rotate-0 scale-110' : '-rotate-45 scale-90'}`}
                 style={{ left: `${i * 25 + 25 / 2}%` }}
               >
-                <div className={`w-full h-full rounded-full brutalist-border-sm flex items-center justify-center ${i <= activePhase ? 'bg-yellow-400' : 'bg-broke-background'
-                  }`}>
+                <div className={`w-full h-full rounded-full brutalist-border-sm flex items-center justify-center ${i <= activePhase ? 'bg-yellow-400' : 'bg-broke-background'}`}>
                   <span className="text-2xl">{roadmapData[i].icon}</span>
                 </div>
               </div>
@@ -135,10 +126,7 @@ const Roadmap = () => {
             {roadmapData.map((phase, index) => (
               <div
                 key={phase.phase}
-                className={`relative ${index <= activePhase
-                  ? 'opacity-100 translate-y-0'
-                  : 'opacity-40 translate-y-4'
-                  } transition-all duration-500 ease-out`}
+                className={`relative ${index <= activePhase ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-4'} transition-all duration-500 ease-out`}
               >
                 <div
                   className="brutalist-card h-full bg-cover bg-center"
@@ -158,35 +146,23 @@ const Roadmap = () => {
                           key={itemIndex}
                           className="flex items-start gap-2"
                         >
-                          <span className=" w-6 h-6 bg-broke-primary mt-1 flex-shrink-0 flex items-center justify-center text-white font-bold">
-                            {itemIndex + 1}
+                          <span className="w-6 h-6 bg-broke-primary mt-1 flex-shrink-0 flex items-center justify-center text-white font-bold">
+                            {item.completed ? "✅" : itemIndex + 1}
                           </span>
-                          <span className="font-bubble text-broke-text">{item}</span>
+                          <span className="font-bubble text-broke-text">{item.text}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
-
-                {/* Phase number bubbles - removed the duplicate circle below */}
-                {/* <div
-                  className={`absolute -top-16 left-1/2 -translate-x-1/2 w-16 h-16 rounded-full 
-                    brutalist-border flex items-center justify-center ${index <= activePhase ? 'bg-broke-primary text-white' : 'bg-broke-background text-broke-muted'
-                    } font-comic text-2xl z-20`}
-                >
-                  {index + 1}
-                </div> */}
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Decorative elements */}
       <div className="absolute top-20 right-10 w-16 h-16 bg-broke-tertiary/30 rotate-12 rounded-full hidden md:block"></div>
       <div className="absolute bottom-20 left-10 w-20 h-20 border-4 border-broke-primary/40 rounded-full hidden md:block"></div>
-
-
     </section>
   );
 };

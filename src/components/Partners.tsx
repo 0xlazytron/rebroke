@@ -79,7 +79,7 @@ const Partners = () => {
 
         <div className="flex justify-center">
           <div className="overflow-hidden" style={{ maxWidth: '100%' }}>
-            <div className="flex gap-8 py-4 animate-scroll" style={{ animationDuration: '30s' }}>
+            <div className="flex gap-8 py-4 animate-scroll" style={{ animationDuration: '10s' }}>
               {partners.map((partner) => (
                 <a
                   key={partner.id}

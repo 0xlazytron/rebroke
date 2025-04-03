@@ -220,7 +220,7 @@ const Tokenomics = () => {
 
                   <div className="flex justify-between">
                     <span className="font-bubble text-broke-text">Tax:</span>
-                    <span className="font-mono text-amber-800 font-bold">0.25 buy/sell</span>
+                    <span className="font-mono text-amber-800 font-bold">0.25% buy/sell</span>
                   </div>
                 </div>
               </div>
