@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Download, } from 'lucide-react';
 import { Twitter, Globe } from "lucide-react";
@@ -39,6 +38,7 @@ const Header = () => {
           <a href="#game" className="font-bubble text-broke-text hover:text-broke-primary transition-colors">Game</a>
           <a href="#tokenomics" className="font-bubble text-broke-text hover:text-broke-primary transition-colors">Tokenomics</a>
           <a href="#roadmap" className="font-bubble text-broke-text hover:text-broke-primary transition-colors">Roadmap</a>
+          <a href="https://brokestake.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-bubble text-broke-text hover:text-broke-primary transition-colors">Rebrokstaker</a>
 
           <div className="flex space-x-3">
             <a href="https://x.com/brokecoinonsol" target="_blank" rel="noopener noreferrer" className="p-3 bg-broke-card rounded-full hover:bg-broke-primary/20 transition-colors">
@@ -87,6 +87,7 @@ const Header = () => {
           <a href="#game" className="font-bubble text-2xl text-broke-text hover:text-broke-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Game</a>
           <a href="#tokenomics" className="font-bubble text-2xl text-broke-text hover:text-broke-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Tokenomics</a>
           <a href="#roadmap" className="font-bubble text-2xl text-broke-text hover:text-broke-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Roadmap</a>
+          <a href="https://brokestake.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-bubble text-2xl text-broke-text hover:text-broke-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Rebrokstaker</a>
 
           <div className="flex space-x-6 mt-8">
             <a href="https://x.com/brokecoinonsol" target="_blank" rel="noopener noreferrer" className="p-3 bg-broke-card rounded-full hover:bg-broke-primary/20 transition-colors">

@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Partners = () => {
@@ -14,7 +13,7 @@ const Partners = () => {
       id: 2,
       name: "Raydium",
       url: "https://raydium.io",
-      logo: "https://cryptologos.cc/logos/raydium-ray-logo.png"
+      logo: "/icons/raydiumlogo.png"
     },
     {
       id: 3,
@@ -38,13 +37,13 @@ const Partners = () => {
       id: 5,
       name: "Solana",
       url: "https://solana.com",
-      logo: "https://cryptologos.cc/logos/solana-sol-logo.png"
+      logo: "/icons/sollogo.png"
     },
     {
       id: 6,
       name: "Orca",
       url: "https://orca.so",
-      logo: "https://cryptologos.cc/logos/orca-orca-logo.png"
+      logo: "/icons/orcalogo.png"
     },
     {
       id: 7,
@@ -56,7 +55,7 @@ const Partners = () => {
       id: 8,
       name: "Raydium",
       url: "https://solscan.io",
-      logo: "https://cryptologos.cc/logos/raydium-ray-logo.png"
+      logo: "/icons/raydiumlogo.png"
     },
     {
       id: 9,
@@ -68,7 +67,7 @@ const Partners = () => {
       id: 10,
       name: "orca",
       url: "https://solscan.io",
-      logo: "https://cryptologos.cc/logos/orca-orca-logo.png"
+      logo: "/icons/orcalogo.png"
     },
   ];
 
