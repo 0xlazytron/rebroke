@@ -27,7 +27,7 @@ const Header = () => {
         <a href="/" className="flex items-center space-x-3">
           <img src="/logo.png" className="h-10 rounded-full md:h-12" alt="Brokecoin Logo" />
           <div className="text-3xl text-bold font-display text-broke-primary tracking-tighter">
-            BROKE<span className="text-broke-tertiary">COIN</span>
+            BROKE<span className="text-broke-tertiary">COIN</span> <span className="text-sm text-broke-text">(website)</span>
           </div>
         </a>
 
