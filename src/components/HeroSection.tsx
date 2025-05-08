@@ -65,13 +65,13 @@ const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <a
-              href="https://dexscreener.com/solana/dfvyzkqbhs3lxtuojbtv5mtfyycnmcl66rad1nft7u46"
+              href="https://jup.ag/tokens/Ga4oZoNRLkZkruJpS8NLwa8DJCwKP9hbTBSNDQZ9V43v"
               target="_blank"
               rel="noopener noreferrer"
-              className="brutalist-button flex-1 justify-center"
+              className="brutalist-button flex-1 justify-center uppercase"
             >
               <ExternalLink size={16} className="mr-2" />
-              View on DexScreener
+              buy on jupter
             </a>
             <a
               href="/pdfs/Broke.pdf"

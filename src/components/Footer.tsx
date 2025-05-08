@@ -112,13 +112,13 @@ const Footer = () => {
             </p>
 
             <div className="space-y-4">
-              <a
+              {/* <a
                 href="https://jup.ag/tokens/Ga4oZoNRLkZkruJpS8NLwa8DJCwKP9hbTBSNDQZ9V43v"
                 target='__blank'
                 className="brutalist-button w-full justify-center"
               >
                 <ExternalLink className="mr-2 h-4 w-4" /> Buy on Jupiter
-              </a>
+              </a> */}
 
               <a
                 href="https://dexscreener.com/solana/dfvyzkqbhs3lxtuojbtv5mtfyycnmcl66rad1nft7u46"
