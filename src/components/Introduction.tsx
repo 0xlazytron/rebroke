@@ -7,7 +7,7 @@ const Introduction = () => {
       <div className="container mx-auto">
         <div className="grid md:grid-cols-5 gap-12 items-center">
           <div className="md:col-span-3">
-            <h2 className="brutalist-title text-3xl md:text-4xl lg:text-5xl mb-6" data-text="WHAT IS BROKECOIN?">
+            <h2 className="brutalist-title relative z-10 text-3xl md:text-4xl lg:text-5xl mb-6" data-text="WHAT IS BROKECOIN?">
               WHAT IS BROKECOIN?
             </h2>
 
@@ -64,7 +64,7 @@ const Introduction = () => {
       <div className="absolute top-1/2 right-0 w-4 h-40 bg-broke-primary"></div>
 
       {/* Added comic-style clouds */}
-      <div className="absolute top-20 right-[20%] w-32 h-2">
+      <div className="absolute  top-20 right-[20%] w-32 h-2">
         <img src="/graphics/cloud/cloud-3.svg" alt="" />
       </div>
     </section>
