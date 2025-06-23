@@ -71,7 +71,7 @@ const HeroSection = () => {
               className="brutalist-button flex-1 justify-center uppercase"
             >
               <ExternalLink size={16} className="mr-2" />
-              buy on jupter
+              buy on jupiter
             </a>
             <a
               href="/pdfs/Broke.pdf"
