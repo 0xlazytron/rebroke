@@ -55,9 +55,14 @@ const Header = () => {
             </a>
           </div>
 
-          <a href="https://jup.ag/tokens/Ga4oZoNRLkZkruJpS8NLwa8DJCwKP9hbTBSNDQZ9V43v" target='__blank' className="brutalist-button">
+          <button 
+            onClick={() => {
+              document.getElementById('token-swap')?.scrollIntoView({ behavior: 'smooth' });
+            }} 
+            className="brutalist-button"
+          >
             <Download className="mr-2 h-4 w-4" /> Buy Now
-          </a>
+          </button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -104,10 +109,15 @@ const Header = () => {
             </a>
           </div>
 
-          <a href="https://jup.ag/tokens/Ga4oZoNRLkZkruJpS8NLwa8DJCwKP9hbTBSNDQZ9V43v
-" target='__blank' className="brutalist-button w-full justify-center mt-8" onClick={() => setIsMenuOpen(false)}>
+          <button 
+            onClick={() => {
+              document.getElementById('token-swap')?.scrollIntoView({ behavior: 'smooth' });
+              setIsMenuOpen(false);
+            }} 
+            className="brutalist-button w-full justify-center mt-8"
+          >
             <Download className="mr-2 h-5 w-5" /> Buy Now
-          </a>
+          </button>
         </nav>
       </div>
     </header >
