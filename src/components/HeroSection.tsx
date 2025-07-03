@@ -1,10 +1,108 @@
 
-import React, { useState } from 'react';
-import { Copy, ExternalLink } from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react';
+import { Copy, ExternalLink, Volume2, VolumeX, Play, Pause, Maximize, Minimize } from 'lucide-react';
 import { toast } from 'sonner';
 
 const HeroSection = () => {
   const contractAddress = 'Ga4oZoNRLkZkruJpS8NLwa8DJCwKP9hbTBSNDQZ9V43v';
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoContainerRef = useRef<HTMLDivElement>(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [isMuted, setIsMuted] = useState(true);
+  const [showControls, setShowControls] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  // Handle video play/pause
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (videoRef.current.paused) {
+        videoRef.current.play();
+        setIsPlaying(true);
+      } else {
+        videoRef.current.pause();
+        setIsPlaying(false);
+      }
+    }
+  };
+
+  // Handle video mute/unmute
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(!isMuted);
+    }
+  };
+
+  // Handle seeking when clicking on progress bar
+  const handleSeek = (e: React.MouseEvent<HTMLDivElement>) => {
+    // Prevent default and stop propagation are now handled in the onClick handler
+    if (videoRef.current) {
+      const progressBar = e.currentTarget;
+      const rect = progressBar.getBoundingClientRect();
+      const pos = (e.clientX - rect.left) / rect.width;
+      videoRef.current.currentTime = pos * videoRef.current.duration;
+    }
+  };
+
+  // Handle fullscreen toggle
+  const toggleFullscreen = () => {
+    if (!videoContainerRef.current) return;
+    
+    if (!document.fullscreenElement) {
+      videoContainerRef.current.requestFullscreen().catch(err => {
+        console.error(`Error attempting to enable fullscreen: ${err.message}`);
+      });
+      setIsFullscreen(true);
+    } else {
+      document.exitFullscreen();
+      setIsFullscreen(false);
+    }
+  };
+  
+  // Update fullscreen state when exiting with Escape key
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+    
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    return () => {
+      document.removeEventListener('fullscreenchange', handleFullscreenChange);
+    };
+  }, []);
+
+  // Initialize video
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      // Set initial state
+      setIsPlaying(!video.paused);
+      setIsMuted(video.muted);
+
+      // Add event listeners
+      const handlePlay = () => setIsPlaying(true);
+      const handlePause = () => setIsPlaying(false);
+      const handleVolumeChange = () => setIsMuted(video.muted);
+      const handleTimeUpdate = () => {
+        if (video.duration) {
+          setProgress((video.currentTime / video.duration) * 100);
+        }
+      };
+
+      video.addEventListener('play', handlePlay);
+      video.addEventListener('pause', handlePause);
+      video.addEventListener('volumechange', handleVolumeChange);
+      video.addEventListener('timeupdate', handleTimeUpdate);
+
+      return () => {
+        video.removeEventListener('play', handlePlay);
+        video.removeEventListener('pause', handlePause);
+        video.removeEventListener('volumechange', handleVolumeChange);
+        video.removeEventListener('timeupdate', handleTimeUpdate);
+      };
+    }
+  }, []);
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(contractAddress);
@@ -96,7 +194,176 @@ const HeroSection = () => {
               <div className="absolute inset-0 flex items-center justify-center">
 
                 <div className="text-9xl font-display animate-bounce-slight">
-                  <img src="/graphics/broke.png" alt="" />
+                  {/* <img src="/graphics/broke.png" alt="" /> */}
+                  <div 
+                    ref={videoContainerRef}
+                    className="video-player-container brutalist-border bg-white/90 p-2 relative overflow-hidden"
+                  >
+                    <div
+                      className="relative"
+                      onMouseEnter={() => setShowControls(true)}
+                      onMouseLeave={() => setShowControls(false)}
+                    >
+                      {/* Video wrapper to handle play/pause clicks */}
+                      <div 
+                        className="video-wrapper relative" 
+                        onClick={(e) => {
+                          // Only toggle play when clicking directly on the wrapper
+                          // and not on any child elements (like controls)
+                          if (e.currentTarget === e.target && !showControls) {
+                            e.preventDefault();
+                            togglePlay();
+                          }
+                        }}
+                      >
+                        <video
+                          ref={videoRef}
+                          id="hero-video"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="w-full rounded-sm"
+                          poster="/graphics/broke.png"
+                          onClick={(e) => {
+                            // Completely stop propagation on video element clicks
+                            e.preventDefault();
+                            e.stopPropagation();
+                          }}
+                        >
+                          <source src="/graphics/broke.mp4" type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-broke-primary via-broke-secondary to-broke-tertiary"></div>
+
+                      {/* Custom video title overlay */}
+                      <div className="absolute top-2 left-2 bg-broke-primary/90 text-broke-text px-2 py-1 text-xs font-bubble brutalist-border-sm rounded-sm">
+                        BROKE COIN
+                      </div>
+
+                      {/* Video controls */}
+                      <div 
+                        className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 transition-opacity duration-300 flex flex-col gap-2 z-10"
+                        style={{ opacity: showControls ? 1 : 0 }}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          return false;
+                        }}
+                      >
+                        {/* Progress bar */}
+                        <div 
+                          className="w-full h-2 bg-white/30 rounded-full cursor-pointer relative overflow-hidden brutalist-border-sm"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            handleSeek(e);
+                            return false;
+                          }}
+                        >
+                          <div 
+                            className="absolute top-0 left-0 h-full bg-gradient-to-r from-broke-primary to-broke-secondary rounded-full"
+                            style={{ width: `${progress}%` }}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              return false;
+                            }}
+                          ></div>
+                        </div>
+                        
+                        {/* Control buttons */}
+                        <div 
+                          className="flex justify-between items-center"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            return false;
+                          }}
+                        >
+                          <div 
+                            className="flex items-center gap-4"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              return false;
+                            }}
+                          >
+                            {/* Play/Pause button */}
+                            <button 
+                              onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                togglePlay();
+                                return false;
+                              }}
+                              className="w-8 h-8 bg-broke-primary text-broke-text rounded-full flex items-center justify-center brutalist-border-sm hover:bg-broke-secondary transition-colors"
+                            >
+                              {isPlaying ? <Pause size={16} /> : <Play size={16} />}
+                            </button>
+                            
+                            {/* Mute/Unmute button */}
+                            <button 
+                              onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                toggleMute();
+                                return false;
+                              }}
+                              className="w-8 h-8 bg-broke-primary text-broke-text rounded-full flex items-center justify-center brutalist-border-sm hover:bg-broke-secondary transition-colors"
+                            >
+                              {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} />}
+                            </button>
+                          </div>
+                          
+                          {/* Fullscreen button */}
+                          <button 
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              toggleFullscreen();
+                              return false;
+                            }}
+                            className="w-8 h-8 bg-broke-primary text-broke-text rounded-full flex items-center justify-center brutalist-border-sm hover:bg-broke-secondary transition-colors"
+                          >
+                            {isFullscreen ? <Minimize size={16} /> : <Maximize size={16} />}
+                          </button>
+                        </div>
+                      </div>
+
+                      {/* Play/Pause overlay for center of video - only shown when controls are hidden and video is paused */}
+                      {!isPlaying && !showControls && (
+                        <div
+                          className="absolute inset-0 flex items-center justify-center cursor-pointer"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            togglePlay();
+                            return false;
+                          }}
+                        >
+                          <div 
+                            className="w-16 h-16 bg-broke-primary/80 rounded-full flex items-center justify-center brutalist-border animate-pulse"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              return false;
+                            }}
+                          >
+                            <Play size={32} className="text-broke-text ml-1" />
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Custom video corner decoration */}
+                      {/* <div className="absolute bottom-2 right-2">
+                        <div className="w-6 h-6 bg-broke-secondary brutalist-border-sm flex items-center justify-center rounded-full">
+                          <span className="text-white text-xs">$</span>
+                        </div>
+                      </div> */}
+                    </div>
+                  </div>
                 </div>
 
 

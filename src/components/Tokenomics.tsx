@@ -35,7 +35,7 @@ const Tokenomics = () => {
     { name: 'Development', value: 5, color: '#8E8E93' },
   ];
 
-  const totalSupply = "1,000,000,000,000";
+  const totalSupply = "100,000,000,000";
   const remainingSupply = "90,000,000,000";
   const burnedSupply = "10,000,000,000";
 
@@ -220,7 +220,7 @@ const Tokenomics = () => {
 
                   <div className="flex justify-between">
                     <span className="font-bubble text-broke-text">Tax:</span>
-                    <span className="font-mono text-amber-800 font-bold">0.25% buy/sell</span>
+                    <span className="font-mono text-amber-800 font-bold">2% buy/sell</span>
                   </div>
                 </div>
               </div>

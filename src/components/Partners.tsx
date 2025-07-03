@@ -28,43 +28,43 @@ const Partners = () => {
       logo: "/icons/solana.svg"
     },
     {
-      id: 4,
+      id: 5,
       name: "Swftcoin Bridgers",
       url: "https://swap.swft.pro/#/?sourceFlag=BROKE",
       logo: "https://swap.swft.pro/img/allchain.4cda5362.png"
     },
     {
-      id: 5,
+      id: 6,
       name: "Solana",
       url: "https://solana.com",
       logo: "/icons/sollogo.png"
     },
     {
-      id: 6,
+      id: 7,
       name: "Orca",
       url: "https://orca.so",
       logo: "/icons/orcalogo.png"
     },
     {
-      id: 7,
+      id: 8,
       name: "SolScan",
       url: "https://solscan.io",
       logo: "/icons/solscan.svg"
     },
     {
-      id: 8,
+      id: 9,
       name: "Raydium",
       url: "https://solscan.io",
       logo: "/icons/raydiumlogo.png"
     },
     {
-      id: 9,
+      id: 10,
       name: "Jupiter",
       url: "https://jup.ag",
       logo: "https://jup.ag/_next/image?url=%2Fsvg%2Fjupiter-logo.png&w=32&q=75"
     },
     {
-      id: 10,
+      id: 11,
       name: "orca",
       url: "https://solscan.io",
       logo: "/icons/orcalogo.png"

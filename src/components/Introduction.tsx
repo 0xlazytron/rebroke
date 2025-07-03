@@ -15,7 +15,7 @@ const Introduction = () => {
               <div className="brutalist-card">
                 <h3 className="font-comic text-xl text-broke-primary mb-3">BROKE OR VALHALLA</h3>
                 <p className="font-bubble text-broke-text">
-                  BrokeCoin started as a simple meme because of market forces and family belief that we’ll go Broke in crypto. Now it’s a fully back LLC registered in the United States. We decided if we're going to be broke, let's at least have fun and be legal with it.
+                  BrokeCoin started as a simple meme because of market forces and family belief that we’ll go Broke in crypto. Now it’s a fully backed LLC registered in the United States. We decided if we're going to be broke, let's at least have fun and be legal with it.
                 </p>
 
               </div>

@@ -95,6 +95,32 @@
   .brutalist-button {
     @apply inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-yellow-400 text-amber-900 hover:bg-orange-400 hover:text-white brutalist-border-sm px-6 py-3 font-bold uppercase tracking-wide;
   }
+  
+  /* Custom Video Player Styles */
+  .video-player-container {
+    @apply transition-all duration-300 hover:shadow-[6px_6px_0px_rgba(0,0,0,0.8)];
+  }
+  
+  .video-player-container video {
+    @apply bg-amber-100;
+  }
+  
+  /* Custom video controls styling */
+  .video-player-container video::-webkit-media-controls-panel {
+    @apply bg-amber-100/90;
+  }
+  
+  .video-player-container video::-webkit-media-controls-play-button {
+    @apply text-broke-primary;
+  }
+  
+  .video-player-container video::-webkit-media-controls-timeline {
+    @apply bg-broke-primary/20 rounded-full;
+  }
+  
+  .video-player-container video::-webkit-media-controls-volume-slider {
+    @apply bg-broke-primary/20 rounded-full;
+  }
 
   .comic-pattern {
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FCA903' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
