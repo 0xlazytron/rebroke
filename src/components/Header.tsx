@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Download, } from 'lucide-react';
+import { Menu, X, Download, Clock } from 'lucide-react';
 import { Twitter, Globe } from "lucide-react";
 import { FaTiktok, FaReddit, FaTelegramPlane } from "react-icons/fa";
 import { cn } from '@/lib/utils';
@@ -38,7 +38,13 @@ const Header = () => {
           <a href="#game" className="font-bubble text-broke-text hover:text-broke-primary transition-colors">Game</a>
           <a href="#tokenomics" className="font-bubble text-broke-text hover:text-broke-primary transition-colors">Tokenomics</a>
           <a href="#roadmap" className="font-bubble text-broke-text hover:text-broke-primary transition-colors">Roadmap</a>
-          <a href="https://brokestake.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-bubble text-broke-text hover:text-broke-primary transition-colors">Brokestaker</a>
+          <div className="relative cursor-pointer" onClick={(e) => e.preventDefault()}>
+            <div className="absolute w-[100px] -top-6 left-1/2 transform -translate-x-1/2 flex items-center justify-center space-x-1 bg-broke-primary text-broke-background text-xs px-2 py-1 rounded-full font-bold animate-pulse shadow-lg">
+              <Clock size={10} />
+              <span>Coming Soon</span>
+            </div>
+            <span className="font-bubble text-broke-text hover:text-broke-primary transition-colors">Brokestaker</span>
+          </div>
 
           <div className="flex space-x-3">
             <a href="https://x.com/brokecoinonsol" target="_blank" rel="noopener noreferrer" className="p-3 bg-broke-card rounded-full hover:bg-broke-primary/20 transition-colors">
@@ -55,10 +61,10 @@ const Header = () => {
             </a>
           </div>
 
-          <button 
+          <button
             onClick={() => {
               document.getElementById('token-swap')?.scrollIntoView({ behavior: 'smooth' });
-            }} 
+            }}
             className="brutalist-button"
           >
             <Download className="mr-2 h-4 w-4" /> Buy Now
@@ -92,7 +98,13 @@ const Header = () => {
           <a href="#game" className="font-bubble text-2xl text-broke-text hover:text-broke-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Game</a>
           <a href="#tokenomics" className="font-bubble text-2xl text-broke-text hover:text-broke-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Tokenomics</a>
           <a href="#roadmap" className="font-bubble text-2xl text-broke-text hover:text-broke-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Roadmap</a>
-          <a href="https://brokestake.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-bubble text-2xl text-broke-text hover:text-broke-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Brokestaker</a>
+          <div className="relative cursor-pointer" onClick={(e) => e.preventDefault()}>
+            <div className="absolute w-[100px] -top-8 left-1/2 transform -translate-x-1/2 flex items-center justify-center space-x-1 bg-broke-primary text-broke-background text-xs px-2 py-1 rounded-full font-bold animate-pulse shadow-lg">
+              <Clock size={12} />
+              <span>Coming Soon</span>
+            </div>
+            <span className="font-bubble text-2xl text-broke-text hover:text-broke-primary transition-colors">Brokestaker</span>
+          </div>
 
           <div className="flex space-x-6 mt-8">
             <a href="https://x.com/brokecoinonsol" target="_blank" rel="noopener noreferrer" className="p-3 bg-broke-card rounded-full hover:bg-broke-primary/20 transition-colors">
@@ -109,11 +121,11 @@ const Header = () => {
             </a>
           </div>
 
-          <button 
+          <button
             onClick={() => {
               document.getElementById('token-swap')?.scrollIntoView({ behavior: 'smooth' });
               setIsMenuOpen(false);
-            }} 
+            }}
             className="brutalist-button w-full justify-center mt-8"
           >
             <Download className="mr-2 h-5 w-5" /> Buy Now
